@@ -48,3 +48,4 @@ public class AreaCalculator {
     System.out.println("Good! For now..");
   }
 }
+
