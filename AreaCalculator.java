@@ -27,9 +27,14 @@ public class AreaCalculator {
 		  		if (a > 0 && c > 0 && b > 0 && a + b > c && a + c > b && c + b > a)
 		  			area =  0.25 * Math.sqrt((a+b+c)*(-a+b+c)*(a-b+c)*(a+b-c)) ; 
 		  	}
+		  	if (params[0].equals("hexagon") && params.length==2 )
+		  	{
+		  		double a = Double.parseDouble(params[1]) ;
+		  		if (a > 0)
+		  			area = Math.pow(a,2) * 1.5 * Math.sqrt(3);
+		  	}  	
 		  	
-		  		
-		  	return area;	
+		  		return area;	
 	  }
 	  
   
@@ -49,6 +54,10 @@ public class AreaCalculator {
       System.out.println("Wrong3");
       return;
     }
+    if (Math.ceil(AreaCalculator.calculate("hexagon", "10")) != 260.0) {
+        System.out.println("Wrong4");
+        return;
+      }
     
     System.out.println("Good! For now..");
   }
