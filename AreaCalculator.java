@@ -12,7 +12,7 @@ public class AreaCalculator {
       return;
     }
     
-    if (Math.ceil(AreaCalculate.calculate("triangle", "10", "5", "20")) != 73.0) {
+    if (Math.ceil(AreaCalculator.calculate("triangle", "10", "5", "20")) != 73.0) {
       System.out.println("Wrong");
       return;
     }
