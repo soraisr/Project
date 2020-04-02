@@ -1,33 +1,38 @@
 
 public class AreaCalculator {
 	
-  public static double calculate(String... params) { 
-	  	if (params.length < 2)
-	  		return 0 ;
-	  	double area = 0 ;
-	  	if (params[0].equals("square") && params.length==3 )
-	  	{
-	  		double height = Integer.parseInt(params[1]) ;
-	  		double width = Integer.parseInt(params[2]) ;
-	  		area = height*width ; 
-	  	}
-	  	if (params[0].equals("circle") && params.length==2 )
-	  	{
-	  		double radius = Integer.parseInt(params[1]) ;
-	  		area = Math.pow(radius,2)*Math.PI ; 
-	  	}
-	  	if (params[0].equals("triangle") && params.length==4 )
-	  	{
-	  		double a = Integer.parseInt(params[1]) ;
-	  		double b = Integer.parseInt(params[2]) ;
-	  		double c = Integer.parseInt(params[3]) ;
-	  		area =  0.25 * Math.sqrt((a+b+c)*(-a+b+c)*(a-b+c)*(a+b-c)) ; 
-	  	}
-	  	
-	  		
-	  	return area;	
+	  public static double calculate(String... params) { 
+		  	if (params.length < 2)
+		  		return 0 ;
+		  	double area = 0 ;
+		  	if (params[0].equals("square") && params.length==3 )
+		  	{
+		  		double height = Integer.parseInt(params[1]) ;
+		  		double width = Integer.parseInt(params[2]) ;
+		  		if (height > 0 && width >0) 
+		  			area = height*width ; 
+		  	}
+		  	if (params[0].equals("circle") && params.length==2 )
+		  	{
+		  		double radius = Integer.parseInt(params[1]) ;
+		  		if (radius > 0)
+		  			area = Math.pow(radius,2)*Math.PI ;
+		  		
+		  	}
+		  	if (params[0].equals("triangle") && params.length==4 )
+		  	{
+		  		double a = Integer.parseInt(params[1]) ;
+		  		double b = Integer.parseInt(params[2]) ;
+		  		double c = Integer.parseInt(params[3]) ;
+		  		if (a > 0 && c > 0 && b > 0 && a + b > c && a + c > b && c + b > a)
+		  			area =  0.25 * Math.sqrt((a+b+c)*(-a+b+c)*(a-b+c)*(a+b-c)) ; 
+		  	}
+		  	
+		  		
+		  	return area;	
+	  }
 	  
-  }
+  
   
   public static void main(String[] args) {
 	  	if (AreaCalculator.calculate("square", "3", "20") != 60.0) {
