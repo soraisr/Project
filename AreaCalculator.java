@@ -6,7 +6,7 @@ public class AreaCalculator {
 		  	if (params.length < 2)
 		  		return -1 ;
 		  	try {
-		  	double area = 0 ;
+		  	double area = -1 ;
 		  	if (params[0].equals("rect") && params.length==3 )
 		  	{
 		  		double height = Double.parseDouble(params[1]) ;
