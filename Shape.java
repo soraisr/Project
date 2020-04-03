@@ -4,4 +4,8 @@ public class Shape {
 	{
 		return 0 ;
 	}
+	public void setparam(String... params) {
+		
+
+	}
 }
