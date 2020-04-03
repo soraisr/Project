@@ -2,8 +2,10 @@
 public class AreaCalculator {
 	
 	  public static double calculate(String... params) { 
+	
 		  	if (params.length < 2)
 		  		return -1 ;
+		  	try {
 		  	double area = 0 ;
 		  	if (params[0].equals("rect") && params.length==3 )
 		  	{
@@ -27,15 +29,20 @@ public class AreaCalculator {
 		  		if (a > 0 && c > 0 && b > 0 && a + b > c && a + c > b && c + b > a)
 		  			area =  0.25 * Math.sqrt((a+b+c)*(-a+b+c)*(a-b+c)*(a+b-c)) ; 
 		  	}
+		  	return area;
 		  	
-		  		
-		  	return area;	
+		  	}
+		  	catch (NumberFormatException e) {
+		  		e.printStackTrace();
+		  	    return -1;
+		  	}	
 	  }
+
 	  
   
   
   public static void main(String[] args) {
-	  	if (AreaCalculator.calculate("rect", "abc", "20") != 60.0) {
+	  	if (AreaCalculator.calculate("rect", "3", "20") != 60.0) {
       System.out.println("Wrong1");
       return;
     }
