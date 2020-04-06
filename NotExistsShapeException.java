@@ -1,5 +1,5 @@
 
-public class NotExistsShapeException extends Exception {
+public class NotExistsShapeException extends RuntimeException {
 	
     // Parameterless Constructor
       public NotExistsShapeException() {
@@ -11,5 +11,14 @@ public class NotExistsShapeException extends Exception {
     {
        super(message);
     }
+    public  NotExistsShapeException(String message ,Throwable cause)
+    {
+       super(message , cause );
+    }
+    public  NotExistsShapeException(Throwable cause)
+    {
+       super(cause);
+    }
+
 
 }

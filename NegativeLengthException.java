@@ -1,5 +1,5 @@
-
-public class NegativeLengthException extends Exception {
+public class NegativeLengthException extends RuntimeException {
+	private Throwable cause = null;
     // Parameterless Constructor
     public NegativeLengthException() {
 
@@ -10,4 +10,13 @@ public class NegativeLengthException extends Exception {
   {
      super(message);
   }
+  public  NegativeLengthException(String message ,Throwable cause)
+  {
+     super(message , cause );
+  }
+  public  NegativeLengthException(Throwable cause)
+  {
+	     super( cause );
+  }
+
 }

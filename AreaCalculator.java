@@ -44,10 +44,10 @@ public class AreaCalculator {
 		  			double c = Double.parseDouble(params[3]) ;
 		  			if (a > 0 && c > 0 && b > 0 && a + b > c && a + c > b && c + b > a)
 		  				return 0.25 * Math.sqrt((a+b+c)*(-a+b+c)*(a-b+c)*(a+b-c)) ; 
-		  			else throw new NegativeLengthException("needed a > 0 && c > 0 && b > 0 && a + b > c && a + c > b && c + b > a" ) ;
+		  			else throw new NegativeLengthException("required a > 0 && c > 0 && b > 0 && a + b > c && a + c > b && c + b > a" ) ;
 		  		}
 		  		else 
-		  			throw new NotEnoughParamException("needed 4 params for triangle") ;
+		  			throw new NotEnoughParamException("required 4 params for triangle") ;
 		  	}
 		  	
 		  	else 

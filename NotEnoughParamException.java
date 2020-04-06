@@ -1,5 +1,5 @@
 
-public class NotEnoughParamException extends Exception {
+public class NotEnoughParamException extends RuntimeException {
 	
 	      // Parameterless Constructor
 	        public NotEnoughParamException() {
@@ -11,6 +11,15 @@ public class NotEnoughParamException extends Exception {
 	      {
 	         super(message);
 	      }
+	      public   NotEnoughParamException(String message ,Throwable cause)
+	      {
+	         super(message , cause );
+	      }
+	      public   NotEnoughParamException(Throwable cause)
+	      {
+	         super( cause );
+	      }
+
 	 }
 
 
