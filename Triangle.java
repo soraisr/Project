@@ -14,30 +14,26 @@ public class Triangle extends Shape {
 		this.c = Double.parseDouble(c) ;
 	}
 	Triangle(){
-
 	}
 	@Override
 	public void setparam(String... params) {
 		if (params.length == 4) {
-		a = Double.parseDouble(params[1]);
-		b = Double.parseDouble(params[2]);
-		c = Double.parseDouble(params[3]);
+			a = Double.parseDouble(params[1]);
+			b = Double.parseDouble(params[2]);
+			c = Double.parseDouble(params[3]);
+			boolean x = (a > 0 && c > 0 && b > 0 && a + b > c && a + c > b && c + b > a);
+			if (x == false) // should I separate it for 2 conditions (non negative and validation)?
+				throw new NegativeLengthException("A triangle is valid if sum of its two non negative sides is greater than the third non negative side" ) ;		
 		} 
 		else
-		{
-			a = -1 ; 
-			b = -1 ;	
-			c = -1 ;
-		}
+			throw new NotEnoughParamException("required 4 params for triangle") ;
 	}
 	
 	@Override
 	public double calculate()
 	{
-		double area = 0 ;
-  		if (a > 0 && c > 0 && b > 0 && a + b > c && a + c > b && c + b > a)
-  			area =  0.25 * Math.sqrt((a+b+c)*(-a+b+c)*(a-b+c)*(a+b-c)) ; 
-		return area ;
+  			return  0.25 * Math.sqrt((a+b+c)*(-a+b+c)*(a-b+c)*(a+b-c)) ; 
+
 	}
 }
 

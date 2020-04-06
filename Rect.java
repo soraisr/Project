@@ -16,23 +16,19 @@ public class Rect extends Shape {
 	@Override
 	public void setparam(String... params) {
 		if (params.length == 3) {
-		height = Double.parseDouble(params[1]);
-		width = Double.parseDouble(params[2]);
+			height = Double.parseDouble(params[1]);
+			width = Double.parseDouble(params[2]);
+	  		if (height < 0 || width < 0) 
+				throw new NegativeLengthException(" required height > 0  width > 0") ;
 		} 
 		else
-		{
-			height = -1 ; 
-			width = -1 ;	
-		}
+			throw new NotEnoughParamException("required 3 params for rect") ;
 	}
 	
 	@Override
 	public double calculate()
 	{
-		double area = -1 ;
-  		if (height >= 0 && width >= 0) 
-  			area = height*width ; 
-		return area ;
+  			return height*width ; 
 	}
 }
 

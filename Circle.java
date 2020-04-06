@@ -11,15 +11,19 @@ public class Circle extends Shape {
 	}
 	@Override
 	public void setparam(String... params) {
-		this.radius = Double.parseDouble(params[1]);
-		if (radius < 0)
-			radius = 0 ;
+		if (params.length == 2)
+		{
+			this.radius = Double.parseDouble(params[1]);
+			if  (radius < 0)
+				throw new NegativeLengthException(" required radius > 0") ;
+		}
+		else 
+			throw new NotEnoughParamException("required 2 params for circle") ;	
 	}
 	@Override
 	public double calculate()
 	{
-		double area = Math.pow(radius,2)*Math.PI ;
-		return area ;
+		return Math.pow(radius,2)*Math.PI ;
 	}
 }
 
