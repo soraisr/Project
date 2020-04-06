@@ -1,5 +1,4 @@
 public class NegativeLengthException extends RuntimeException {
-	private Throwable cause = null;
     // Parameterless Constructor
     public NegativeLengthException() {
 

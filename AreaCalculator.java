@@ -1,8 +1,7 @@
 
 public class AreaCalculator {
 	
-	  public static double calculate(String... params) throws NotEnoughParamException,NumberFormatException, NegativeLengthException { 
-	
+	  public static double calculate(String... params) {
 		  	if (params.length < 2)
 		  		throw new NotEnoughParamException("less then 2 params") ;
 		  
