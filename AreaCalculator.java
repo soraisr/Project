@@ -49,6 +49,20 @@ public class AreaCalculator {
 		  			throw new NotEnoughParamException("required 4 params for triangle") ;
 		  	}
 		  	
+		  	if (params[0].equals("hexagon"))
+		  	{
+		  		if( params.length==2 )
+		  		{
+		  			double a = Double.parseDouble(params[1]) ;
+		  			if (a > 0)
+		  				return Math.pow(a,2) * 1.5 * Math.sqrt(3);
+		  			else
+		  				throw new NegativeLengthException("required a > 0");
+		  		}
+		  		else 
+		  			throw new NotEnoughParamException("required 2 params for hexagon") ;
+		  	}
+		  	
 		  	else 
 		  		throw new NotEnoughParamException("404 : shape not found " );
 		  	
@@ -70,7 +84,12 @@ public class AreaCalculator {
 		      System.out.println("Wrong3");
 		      return;
 		    }
-			} catch (Exception e) {
+		    if (Math.ceil(AreaCalculator.calculate("hexagon", "10")) != 260.0) {
+		        System.out.println("Wrong4");
+		        return;
+		     }
+			}
+	catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
