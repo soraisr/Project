@@ -21,7 +21,7 @@ public class AreaCalculator {
 		  			area = Math.pow(radius,2)*Math.PI ;
 		  		
 		  	}
-		  	if (params[0].equals("triangle") && params.length==4 )
+		  	if (params[0].equals("triangle") && params.length== 4 )
 		  	{
 		  		double a = Double.parseDouble(params[1]) ;
 		  		double b = Double.parseDouble(params[2]) ;
