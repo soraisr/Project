@@ -32,7 +32,7 @@ public class Testing {
 	        Arguments.of(79.0 ,new String[] {"circle", "5"}),
 	        Arguments.of(60.0 ,new String[]{"meow", "3", "20"}),
 	        Arguments.of(73.0 ,new String[] {"triangle", "10", "15", "20"}),
-	        Arguments.of(10.0 ,new String[] {"triangle", "abc", "-15", "20"})  
+	        Arguments.of(10.0 ,new String[] {"triangle", "ABC", "-15", "20"})  
 	    ); 
 	}
 }
