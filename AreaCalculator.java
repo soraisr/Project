@@ -64,7 +64,7 @@ public class AreaCalculator {
 		  	}
 		  	
 		  	else 
-		  		throw new NotEnoughParamException("404 : shape not found " );
+		  		throw new NotEnoughParamException("404 : shape not found" );
 		  	
 		  		
 	  }
