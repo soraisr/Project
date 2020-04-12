@@ -1,9 +1,11 @@
+import java.lang.reflect.InvocationTargetException;
 
 public class Main {
 	  public static double calculate(String... params) { 
 		 Shape s = new Shape();
 		try {
-			s = (Shape) Class.forName(params[0]).newInstance();
+				s = (Shape) Class.forName(params[0]).getDeclaredConstructor(String[].class).newInstance((Object)params);
+
 		} 
 		catch (ClassNotFoundException e) {
 			throw new NotExistsShapeException(" Error 404: shape not found", e);
@@ -13,12 +15,21 @@ public class Main {
 			 
 		} catch (IllegalAccessException e) {
 			throw new NotExistsShapeException(" Error 404: shape not found", e);
+		
+		} catch (IllegalArgumentException e) {
+			throw new NotExistsShapeException(" Error 404: shape not found", e);
+		} catch (InvocationTargetException e) {
+			throw new NotExistsShapeException(" Error 404: shape not found", e);
+		} catch (NoSuchMethodException e) {
+			throw new NotExistsShapeException(" Error 404: shape not found", e);
+		} catch (SecurityException e) {
+			throw new NotExistsShapeException(" Error 404: shape not found", e);
 		}
-		 s.setparam(params);
 		 return s.calculate() ;
 		}
 	
- public static void main(String[] args)
+
+public static void main(String[] args)
  
  {
 	 try {  

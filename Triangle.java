@@ -8,15 +8,7 @@ public class Triangle extends Shape {
 		this.a = b ;
 		this.c = c ;
 	}
-	Triangle(String a , String b ,String c){
-		this.a = Double.parseDouble(a) ;
-		this.b = Double.parseDouble(b) ;
-		this.c = Double.parseDouble(c) ;
-	}
-	Triangle(){
-	}
-	@Override
-	public void setparam(String... params) {
+	Triangle(String... params) {
 		if (params.length == 4) {
 			a = Double.parseDouble(params[1]);
 			b = Double.parseDouble(params[2]);

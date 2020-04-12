@@ -1,1 +1,9 @@
 /AreaCalculator.class
+/Circle.class
+/Main.class
+/NegativeLengthException.class
+/NotEnoughParamException.class
+/NotExistsShapeException.class
+/Rect.class
+/Shape.class
+/Triangle.class

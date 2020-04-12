@@ -6,15 +6,8 @@ public class Rect extends Shape {
 		this.height = a ;
 		this.width = b ;
 	}
-	Rect(String a , String b){
-		this.height = Double.parseDouble(a) ;
-		this.width = Double.parseDouble(b) ;
-	}
-	Rect(){
 
-	}
-	@Override
-	public void setparam(String... params) {
+	Rect(String... params) {
 		if (params.length == 3) {
 			height = Double.parseDouble(params[1]);
 			width = Double.parseDouble(params[2]);
