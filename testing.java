@@ -20,11 +20,7 @@ public class testing {
 
 	void test(double num , String[] params) {
 		double result = -1 ;
-		try {
-			result = AreaCalculator.calculate(params) ;
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		result = AreaCalculator.calculate(params) ;
 		assertEquals(num,result, 0.5);
 	}
 
