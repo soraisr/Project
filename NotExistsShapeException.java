@@ -20,5 +20,3 @@ public class NotExistsShapeException extends RuntimeException {
        super(cause);
     }
 
-
-}

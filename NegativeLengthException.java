@@ -17,5 +17,3 @@ public class NegativeLengthException extends RuntimeException {
   {
 	     super( cause );
   }
-
-}
