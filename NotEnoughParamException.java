@@ -19,3 +19,4 @@ public class NotEnoughParamException extends RuntimeException {
 	      {
 	         super( cause );
 	      }
+}
