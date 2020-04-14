@@ -8,7 +8,7 @@ public class Triangle implements Shape {
 
 	public Triangle(double a , double b , double c){
 		this.a = a ;
-		this.a = b ;
+		this.b = b ;
 		this.c = c ;
 	}
 	
