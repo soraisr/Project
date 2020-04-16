@@ -11,7 +11,7 @@ public class RectFactory implements ShapeFactory {
   public Shape create(String... params) {
 	  int n = params.length ;
 	  if (n == 2)
-    {
+    { 
 		  try {
 		  double a = Double.parseDouble(params[0]) ;
 		  double b = Double.parseDouble(params[1]) ;

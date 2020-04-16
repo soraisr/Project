@@ -17,4 +17,4 @@ public class CircleFactory implements ShapeFactory {
 	  else
 		  throw new NotEnoughParamException("required 1 parameter for circle");
   }
-}
+} 

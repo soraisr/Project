@@ -11,7 +11,7 @@ public class TriangleFactory implements ShapeFactory {
 	  {
 		  double a = Double.parseDouble(params[0]) ;
 		  double b = Double.parseDouble(params[1]) ;
-		  double c = Double.parseDouble(params[2]) ;
+		  double c = Double.parseDouble(params[2]) ; 
 		  if (a > 0 && c > 0 && b > 0 && a + b > c && a + c > b && c + b > a) 
 			  return new Triangle(a, b, c);
 		  else

@@ -6,7 +6,7 @@ public class NotEnoughParamException extends RuntimeException {
 	        public NotEnoughParamException() {
 	    
 	      }
-
+ 
 	      // Constructor that accepts a message
 	      public  NotEnoughParamException(String message)
 	      {
