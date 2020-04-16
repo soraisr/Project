@@ -1,6 +1,9 @@
 import java.lang.reflect.Constructor;
+import java.util.regex.Matcher;  
+import java.util.regex.Pattern; 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.Scanner;
 
 
 import shape.*;
@@ -51,7 +54,11 @@ public static void main(String[] args)
 		 System.out.println("Wrong3");
 		 return;
 	  }
-	
+	  if (Math.ceil(Main.calculate("RectByPoints", "(1, 2)", "(-1, 3)")) != 2.0) {
+
+		 System.out.println("Wrong4");
+		 return;
+	  }
 	  
 	  System.out.println("Good! For now..");
 	    }
