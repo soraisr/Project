@@ -1,3 +1,4 @@
+package exceptions;
 public class NegativeLengthException extends RuntimeException {
     // Parameterless Constructor
     public NegativeLengthException() {

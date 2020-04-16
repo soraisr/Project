@@ -1,3 +1,4 @@
+package exceptions;
 
 public class NotEnoughParamException extends RuntimeException {
 	

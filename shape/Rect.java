@@ -4,7 +4,7 @@ public class Rect implements Shape {
 	private final double height;
 	private final double width;
 
-	Rect(double a , double b){
+	public Rect(double a , double b){
 		this.height = a ;
 		this.width = b ;
 	}
