@@ -33,7 +33,7 @@ public static void main(String[] args)
  
  {
 	factories.put("Rect", new RectFactory());
-	factories.put("RectByPoints", new RectFactory());
+	factories.put("RectByPoints",new RectByPointsFactory());
 	factories.put("Circle", new CircleFactory());
 	factories.put("Triangle", new TriangleFactory());
 	 try {  
