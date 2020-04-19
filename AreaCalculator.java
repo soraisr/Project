@@ -62,14 +62,7 @@ public class AreaCalculator {
 		  		else 
 		  			throw new NotEnoughParamException("required 2 params for hexagon") ;
 		  	}
-		  	if (params[0].equals("hexagon") && params.length==2 )
-		  	{
-		  		double a = Double.parseDouble(params[1]) ;
-		  		if (a > 0)
-		  			area = Math.pow(a,2) * 1.5 * Math.sqrt(3);
-		  	}  	
 		  	
-<<<<<<< HEAD
 		  	else 
 		  		throw new NotEnoughParamException("404 : shape not found" );
 		  	
@@ -105,33 +98,3 @@ public class AreaCalculator {
 	  }  
 }
 
-=======
-		  		return area;	
-	  }
-	  
-  
-  
-  public static void main(String[] args) {
-	  	if (AreaCalculator.calculate("square", "3", "20") != 60.0) {
-      System.out.println("Wrong1");
-      return;
-    }
-    
-    if (Math.ceil(AreaCalculator.calculate("circle", "5")) != 79.0) {
-      System.out.println("Wrong2");
-      return;
-    }
-    
-    if (Math.ceil(AreaCalculator.calculate("triangle", "10", "15", "20")) != 73.0) {
-      System.out.println("Wrong3");
-      return;
-    }
-    if (Math.ceil(AreaCalculator.calculate("hexagon", "10")) != 260.0) {
-        System.out.println("Wrong4");
-        return;
-      }
-    
-    System.out.println("Good! For now..");
-  }
-}
->>>>>>> 1bff33f15d8f9bcd9f8eee57902a555b462b5b2c
