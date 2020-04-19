@@ -9,13 +9,15 @@ public class TriangleFactory implements ShapeFactory {
 	  int n = params.length;
 	  if (n == 3)
 	  {
-		  double a = Double.parseDouble(params[0]) ;
-		  double b = Double.parseDouble(params[1]) ;
-		  double c = Double.parseDouble(params[2]) ;
-		  if (a > 0 && c > 0 && b > 0 && a + b > c && a + c > b && c + b > a) 
+		  try {
+			  double a = Double.parseDouble(params[0]) ;
+			  double b = Double.parseDouble(params[1]) ;
+			  double c = Double.parseDouble(params[2]) ; 
 			  return new Triangle(a, b, c);
-		  else
-			  throw new NegativeLengthException(" required a > 0 && c > 0 && b > 0 && a + b > c && a + c > b && c + b > a"); 
+		  }
+		  catch (Exception e) {	
+			  throw new NumberFormatException() ;
+		  }	
 	  }
 	  else
 		  throw new NotEnoughParamException("required 3 parameter for triangle");

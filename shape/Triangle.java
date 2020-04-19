@@ -1,6 +1,8 @@
 
 package shape;
 
+import exceptions.NegativeLengthException;
+
 public class Triangle implements Shape {
 	private final double a;
 	private final double b; 
@@ -10,6 +12,8 @@ public class Triangle implements Shape {
 		this.a = a ;
 		this.b = b ;
 		this.c = c ;
+		if (!(a > 0 && c > 0 && b > 0 && a + b > c && a + c > b && c + b > a)) 
+			  throw new NegativeLengthException(" required a > 0 && c > 0 && b > 0 && a + b > c && a + c > b && c + b > a"); 
 	}
 	
 	@Override
