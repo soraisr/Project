@@ -10,6 +10,11 @@ import shape.RectByPoints;
 import shape.Shape;
 
 public class RectByPointsFactory implements ShapeFactory {
+	@Override
+	public String toString()
+	{
+		return "RectByPoints" ;
+	}
 	  public Shape create(String... params) {
 		  int n = params.length ;
 		  if (n == 2)

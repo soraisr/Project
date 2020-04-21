@@ -28,15 +28,19 @@ public class Main {
 		}
 	}
 	
+public static void addToFactory(ShapeFactory fac )
+{
+	factories.put(fac.toString(),fac);
 
+}
 public static void main(String[] args)
  
  {
-	factories.put("Rect", new RectFactory());
-	factories.put("RectByPoints",new RectByPointsFactory());
-	factories.put("Circle", new CircleFactory());
-	factories.put("Triangle", new TriangleFactory());
-	factories.put("Hexagon", new HexagonFactory());
+	addToFactory(new RectFactory());
+	addToFactory(new RectByPointsFactory());
+	addToFactory(new CircleFactory());
+	addToFactory(new TriangleFactory());
+	addToFactory(new HexagonFactory());
 	 try {  
 	  	if (Main.calculate("Rect", "3" ,"20") != 60.0) {
 	    System.out.println("Wrong1");

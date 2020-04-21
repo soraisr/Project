@@ -4,7 +4,13 @@ import exceptions.*;
 
 
 public class CircleFactory implements ShapeFactory {
-  public Shape create(String... params) {
+	
+	@Override
+	public String toString()
+	{
+		return "Circle" ;
+	}
+	public Shape create(String... params) {
 	  int n = params.length;
 	  if (n == 1)
 	  {

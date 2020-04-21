@@ -8,6 +8,11 @@ import shape.*;
 
 
 public class RectFactory implements ShapeFactory {
+	@Override
+	public String toString()
+	{
+		return "Rect" ;
+	}
   public Shape create(String... params) {
 	  int n = params.length ;
 	  if (n == 2)

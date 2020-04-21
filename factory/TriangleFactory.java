@@ -5,6 +5,11 @@ import shape.*;
 
 
 public class TriangleFactory implements ShapeFactory {
+	@Override
+	public String toString()
+	{
+		return "Triangle" ;
+	}
   public Shape create(String... params) {
 	  int n = params.length;
 	  if (n == 3)

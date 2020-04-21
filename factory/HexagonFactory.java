@@ -4,6 +4,11 @@ import exceptions.*;
 
 
 public class HexagonFactory implements ShapeFactory {
+	@Override
+	public String toString()
+	{
+		return "Hexagon" ;
+	}
   public Shape create(String... params) {
 	  int n = params.length;
 	  if (n == 1)
