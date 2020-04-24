@@ -10,8 +10,9 @@ import shape.RectByPoints;
 import shape.Shape;
 
 public class RectByPointsFactory implements ShapeFactory {
-	@Override
-	public String toString()
+	private static final long serialVersionUID = 1L;
+
+	public String  getName()
 	{
 		return "RectByPoints" ;
 	}

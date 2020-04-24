@@ -5,8 +5,10 @@ import shape.*;
 
 
 public class TriangleFactory implements ShapeFactory {
-	@Override
-	public String toString()
+	
+	private static final long serialVersionUID = 1L;
+
+	public String  getName()
 	{
 		return "Triangle" ;
 	}

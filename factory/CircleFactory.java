@@ -5,8 +5,9 @@ import exceptions.*;
 
 public class CircleFactory implements ShapeFactory {
 	
-	@Override
-	public String toString()
+	private static final long serialVersionUID = 1L;
+	
+	public String getName()
 	{
 		return "Circle" ;
 	}
