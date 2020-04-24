@@ -1,9 +1,13 @@
 
 package factory;
 
+import java.io.Serializable;
+
 import shape.Shape;
 
-public interface ShapeFactory {
-  Shape create(String... params);
+public interface ShapeFactory extends Serializable  {
+	
+	public String getName() ;
+	Shape create(String... params);
 } 
 

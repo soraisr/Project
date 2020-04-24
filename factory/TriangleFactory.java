@@ -5,6 +5,13 @@ import shape.*;
 
 
 public class TriangleFactory implements ShapeFactory {
+	
+	private static final long serialVersionUID = 1L;
+
+	public String  getName()
+	{
+		return "Triangle" ;
+	}
   public Shape create(String... params) {
 	  int n = params.length;
 	  if (n == 3)

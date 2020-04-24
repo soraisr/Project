@@ -1,3 +1,4 @@
+import exceptions.*;
 
 public class AreaCalculator {
 	

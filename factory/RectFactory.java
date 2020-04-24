@@ -8,6 +8,12 @@ import shape.*;
 
 
 public class RectFactory implements ShapeFactory {
+	private static final long serialVersionUID = 1L;
+
+	public String  getName()
+	{
+		return "Rect" ;
+	}
   public Shape create(String... params) {
 	  int n = params.length ;
 	  if (n == 2)

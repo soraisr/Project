@@ -1,6 +1,6 @@
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-
+import exceptions.*;
 import java.awt.List;
 import java.util.Arrays;
 import java.util.stream.Stream;

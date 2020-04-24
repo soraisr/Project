@@ -4,7 +4,14 @@ import exceptions.*;
 
 
 public class CircleFactory implements ShapeFactory {
-  public Shape create(String... params) {
+	
+	private static final long serialVersionUID = 1L;
+	
+	public String getName()
+	{
+		return "Circle" ;
+	}
+	public Shape create(String... params) {
 	  int n = params.length;
 	  if (n == 1)
 	  {
